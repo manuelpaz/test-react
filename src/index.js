@@ -22,7 +22,14 @@
 );*/
 const sum = ()=> 3 + 3;
 //Se utiliza jsx con función
-const jsx = <h1>Hola soy, {sum()}</h1>;
+//const jsx = <h1>Hola soy, {sum()}</h1>;
+
+const jsx = (
+  <div>
+    <h1>Hola, soy {name}</h1>
+    <p>Soy estudiante frontend.</p>
+  </div>
+);
 const container = document.getElementById('app');
  //ReacDom.render(__qué__, __dónde__)
 ReacDom.render(jsx, container);
