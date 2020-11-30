@@ -12,8 +12,14 @@
 
  const jsx = <h1>Hello, Platzi Badges from React!</h1>;
  
- const element = React.createElement('a', {href: 'https://platzi.com'}, 'Ir a Platzi'); //Alternativa
- const container = document.getElementById('app');
-
+ //const element = React.createElement('a', {href: 'https://platzi.com'}, 'Ir a Platzi'); //Alternativa
+ //const container = document.getElementById('app');
+ const name = 'Manuel'
+const element = React.createElement(
+  'h1',
+  {},
+  `Hola soy ${name}`
+);
+const container = document.getElementById('app');
  //ReacDom.render(__qué__, __dónde__)
 ReacDom.render(element, container);
