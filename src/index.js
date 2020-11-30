@@ -30,6 +30,15 @@ const jsx = (
     <p>Soy estudiante frontend.</p>
   </div>
 );
+
+//Crear lo anterior sin jsx es mas complicado
+const element = React.createElement(
+  'div',
+  {},
+  React.createElement('h1', {}, `Hola soy ${name}`),
+  React.createElement('p', {}, 'Soy estudiante de la Web!')
+);
+
 const container = document.getElementById('app');
  //ReacDom.render(__qué__, __dónde__)
-ReacDom.render(jsx, container);
+ReacDom.render(element, container);
