@@ -10,16 +10,19 @@
  import React from  'react';
  import ReacDom from 'react-dom';
 
- const jsx = <h1>Hello, Platzi Badges from React!</h1>;
+ //const jsx = <h1>Hello, Platzi Badges from React!</h1>;
  
  //const element = React.createElement('a', {href: 'https://platzi.com'}, 'Ir a Platzi'); //Alternativa
  //const container = document.getElementById('app');
- const name = 'Manuel'
-const element = React.createElement(
+ const name = 'Manuel-Tony'
+/*const element = React.createElement(
   'h1',
   {},
   `Hola soy ${name}`
-);
+);*/
+
+//Se utiliza jsx con variable
+const jsx = <h1>Hola soy, {2 + 2}</h1>;
 const container = document.getElementById('app');
  //ReacDom.render(__qué__, __dónde__)
-ReacDom.render(element, container);
+ReacDom.render(jsx, container);
