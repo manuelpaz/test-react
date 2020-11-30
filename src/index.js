@@ -20,9 +20,9 @@
   {},
   `Hola soy ${name}`
 );*/
-
-//Se utiliza jsx con variable
-const jsx = <h1>Hola soy, {2 + 2}</h1>;
+const sum = ()=> 3 + 3;
+//Se utiliza jsx con función
+const jsx = <h1>Hola soy, {sum()}</h1>;
 const container = document.getElementById('app');
  //ReacDom.render(__qué__, __dónde__)
 ReacDom.render(jsx, container);
