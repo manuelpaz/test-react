@@ -10,7 +10,9 @@
  import React from  'react';
  import ReacDom from 'react-dom';
 
- const element = <h1>Hello, Platzi Badges from React!</h1>;
+ const jsx = <h1>Hello, Platzi Badges from React!</h1>;
+ 
+ const element = React.createElement('h1', {}, 'Hola Soy los children'); //Alternativa
  const container = document.getElementById('app');
 
  //ReacDom.render(__qué__, __dónde__)
