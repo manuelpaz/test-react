@@ -10,11 +10,14 @@ import Navbar from '../components/Navbar';
 class BadgeNew extends React.Component{
     state = {form: {} };    
 
-    handleChange = e => {
-        const nextForm = this.state.form;
-        nextForm[e.target.name] = e.target.value;
+    handleChange = e => {        
         this.setState({
-            form: nextForm,
+            form: {
+                //Dejar caer todos los valores que tenia el form anteriormente
+                ...this.state.form,
+                //Se añade uno nuevo
+                [e.target.name]: e.target.value,
+            },
         });
     };
 
