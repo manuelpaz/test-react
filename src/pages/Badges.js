@@ -63,7 +63,7 @@ class Badges extends React.Component{
                             <ul className="list-unstyled">
                                 {this.state.data.map((badge)=>{
                                     return(
-                                        <li>
+                                        <li key={badge.id}>
                                         <p>
                                             {badge.firstName} {badge.lastName}
                                         </p>
