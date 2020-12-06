@@ -5,18 +5,18 @@
     background-repeat: repeat;
     margin-bottom: 1rem;
   }
-  
+
   .Badges__hero>.Badges__container {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   
-  .Badges__container {
+  .Badges__container{
     width: 100%;
     max-width: 580px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 1rem;    
   }
   
   .Badges_conf-logo {
