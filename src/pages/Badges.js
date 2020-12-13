@@ -20,7 +20,7 @@ class Badges extends React.Component{
     componentDidMount(){
         console.log('3. componentDidMount()');
         //Se simula una petición asincrona.
-        setTimeout(() =>{
+        this.timeoutId =  setTimeout(() =>{
             this.setState({
                 data:[
                     {
@@ -52,7 +52,8 @@ class Badges extends React.Component{
                     }
                   ],
             })
-        }, 3000)
+        }, 3000);
+
     }
 
     //Antes de que se realice una actualización ocurre el siguiente metodo
@@ -74,6 +75,7 @@ class Badges extends React.Component{
     //El siguiente metodo sucede antes de que se vaya el componente del DOM
     componentWillUnmount(){
         console.log('6. componentWillUnmount()'); 
+        clearTimeout(this.timeoutId);
     }
 
     render(){
