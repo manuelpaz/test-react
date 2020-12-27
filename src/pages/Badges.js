@@ -30,6 +30,9 @@ class Badges extends React.Component{
         if(this.state.loading===true){
             return 'Loading...';
         }
+        if(this.state.error){
+            return `Error: ${this.state.error.message}`;
+        }
        return(
             <div className="Listado">                
                 <div className="Badges">
