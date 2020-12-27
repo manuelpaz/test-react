@@ -4,7 +4,7 @@ import './styles/Badges.css';
 import confLogo from   '../images/badge-header.svg';
 import BadgesList from '../components/BadgesList';
 import PageLoading from '../components/PageLoading';
-//import PageError from '../components/PageError';
+import PageError from '../components/PageError';
 
 import api from '../api'
 
@@ -33,8 +33,8 @@ class Badges extends React.Component{
             return <PageLoading />;
         }
         if(this.state.error){
-            return `Error: ${this.state.error.message}`;
-            //return <PageError error= {this.state.error}  />
+            //return `Error: ${this.state.error.message}`;
+            return <PageError error= {this.state.error}  />
         }
        return(
             <div className="Listado">                
