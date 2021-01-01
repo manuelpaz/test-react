@@ -76,6 +76,7 @@ class BadgeNew extends React.Component{
                                 onChange={this.handleChange}
                                 onSubmit = {this.handleSubmit}
                                 formValues = {this.state.form}
+                                error = {this.state.error}
                              />
                         </div>
                     </div>
