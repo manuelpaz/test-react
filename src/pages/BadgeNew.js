@@ -34,22 +34,21 @@ class BadgeNew extends React.Component{
 
     handleSubmit = async e => {
         e.preventDefault();
-        this.setState({loading: true, error: null},() =>{
-            console.log(this.state.loading);
-        });
+        this.setState({loading: true, error: null});
         
         try{            
             await api.badges.create(this.state.form);
             this.setState({loading: false})
+
+            this.props.history.push('/badges');
+
         }catch(error){
             this.setState({loading: false, error: error})
         }
     }
    
-    render(){
-       console.log(this.state.loading);
-        if(this.state.loading){
-            console.log("llegue aqui");
+    render(){       
+        if(this.state.loading){            
             return <PageLoading />;
         }
         return(
