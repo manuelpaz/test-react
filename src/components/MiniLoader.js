@@ -1,13 +1,13 @@
 import React from 'react';
 import './styles/miniLoader.css'
 
-class Loader extends React.Component{
+class MiniLoader extends React.Component{
     render(){
         return(
             <div className="loader-wrap">
-                <div className="loader-container">
-                    <div className="loader"></div>
-                    <div className="loader2"></div>                                    
+                <div className="miniLoader-container">
+                    <div className="miniLoader"></div>
+                    <div className="miniLoader2"></div>                                    
                 </div> 
                 <p>Loading....</p>                                
             </div>               
@@ -15,4 +15,4 @@ class Loader extends React.Component{
     }
 }
 
-export default Loader;
+export default MiniLoader;
