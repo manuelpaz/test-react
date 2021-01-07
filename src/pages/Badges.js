@@ -4,6 +4,7 @@ import './styles/Badges.css';
 import confLogo from   '../images/badge-header.svg';
 import BadgesList from '../components/BadgesList';
 import PageLoading from '../components/PageLoading';
+import MiniLoader from '../components/MiniLoader';
 import PageError from '../components/PageError';
 
 import api from '../api'
@@ -60,7 +61,9 @@ class Badges extends React.Component{
                     </div>
                     <div className="Badges__list">
                         <div className="Badges_container">
-                            <BadgesList  Listbadges={this.state.data} />                            
+                            <BadgesList  Listbadges={this.state.data} />
+
+                            {this.state.loading && <MiniLoader />}                            
                         </div>
                     </div>
                 </div>
