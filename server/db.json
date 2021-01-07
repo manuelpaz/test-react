@@ -47,7 +47,7 @@
     },
     {
       "firstName": "Manuel",
-      "lastName": "Paz",
+      "lastName": "Robles",
       "jobTitle": "Estudiante Platzi",
       "email": "manuelpazrobles@gmail.com",
       "twitter": "manuelpazrobles",
@@ -60,6 +60,14 @@
       "email": "tonypaz_23@hotmail.com",
       "twitter": "tonypaz",
       "id": "KHuiqHn"
+    },
+    {
+      "firstName": "Margarita",
+      "lastName": "Paz",
+      "jobTitle": "Teacher",
+      "email": "titatitatita@robles.com",
+      "twitter": "titatitatita",
+      "id": "wp2PKoH"
     }
   ]
 }
