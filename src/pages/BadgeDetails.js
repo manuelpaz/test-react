@@ -42,7 +42,7 @@ class BadgeDetails extends React.Component{
                     <div className="container">
                         <div className="row">
                             <div className="col-6">
-                                <img src={confLogo} alt="Logo de la conferencia"/>
+                                <img src={confLogo} alt="Logo de la conferencia platzi"/>
                             </div>
                             <div className="col-6 BadgeDetails__hero-attendant-name">
                                 <h1>{this.state.data.firstName} {this.state.data.lastName}</h1>
