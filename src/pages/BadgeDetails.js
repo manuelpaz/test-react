@@ -1,9 +1,11 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 import './styles/BadgeDetails.css'
 import confLogo from '../images/platziconf-logo.svg'
 import PageLoading from '../components/PageLoading'
 import PageError from   '../components/PageError'
+import Badge from   '../components/Badge'
 import api from '../api'
 class BadgeDetails extends React.Component{
     state = {
@@ -36,6 +38,8 @@ class BadgeDetails extends React.Component{
         if(this.state.error){
             return <PageError error={this.state.error} />
         }
+
+        const badge = this.state.data
         return(
             <div>
                 <div className="BadgeDetails__hero">
@@ -50,6 +54,27 @@ class BadgeDetails extends React.Component{
                         </div>
                     </div>
                 </div>   
+                <div className="container">
+                        <div className="row">
+                            <div className="col">
+                                <Badge firstName = {badge.firstName} lastName = {badge.lastName}
+                                email = {badge.email} twitter = {badge.twitter} jobTitle = {badge.jobTitle} />
+                            </div>
+                            <div className="col">
+                                <h2>Actions</h2>
+                                <div>
+                                    <div>
+                                        <Link className="btn btn-primary mb-4" to = {`/badges/${badge.id}/edit`}>
+                                            Edit
+                                        </Link>
+                                    </div>
+                                    <div>
+                                        <button className = "btn btn-danger">Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </div>
         );
     }
