@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from '../pages/Home';
 import Badges from '../pages/Badges';
 import BadgeNew from '../pages/BadgeNew';
-import BadgeDetails from '../pages/BadgeDetails';
+import BadgeDetails from '../pages/BadgeDetailsContainer';
 import BadgeEdit from '../pages/BadgeEdit';
 import NotFound from '../pages/NotFound';
 
