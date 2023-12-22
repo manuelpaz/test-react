@@ -8,21 +8,34 @@ import PageError from '../components/PageError';
 
 import api from '../api/api'
 
-const Badges = () => {
-    const { isLoading, error, data, isFetching } = useQuery(
-      'badges',
-      () => api.list(),
-      {
-        enabled: !isFetching, // Prevent infinite loop during refetch
-      }
-    );
-  
-    const refetch = () => {
-      queryClient.invalidateQueries('badges');
+class Badges extends React.Component{     
+    state ={
+        loading: true,
+        error: null,
+        data: undefined,       
+
     };
-  
-    if (isLoading) return <PageLoading />;
-    if (error) return <PageError error={error} />;
+    componentDidMount(){
+        this.fetchData()
+    }
+    fetchData = async () =>{
+        this.setState({loading: true, error: null})
+
+        try{
+            const data = await api.badges.list();
+            this.setState({loading: false, data: data})
+        }catch(error){
+            this.setState({loading: false, error: error})
+        }
+    };
+    render(){  
+        if(this.state.loading===true){
+            return <PageLoading />;
+        }
+        if(this.state.error){
+            //return `Error: ${this.state.error.message}`;
+            return <PageError error= {this.state.error}  />
+        }
        return(
             <div className="Listado">                
                 <div className="Badges">
@@ -50,7 +63,7 @@ const Badges = () => {
                 </div>
             </div> 
        );
-    };
-
+    }
+}
 
 export default Badges;
