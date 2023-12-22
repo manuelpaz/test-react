@@ -12,7 +12,8 @@ function createBadges(limit = 5) {
     const email = faker.internet.email();
 
     result.push({
-      id: faker.random.uuid(),
+      
+      id: faker.datatype.uuid(),
       firstName,
       lastName,
       email,
@@ -24,16 +25,41 @@ function createBadges(limit = 5) {
 
   return result;
 }
-
+/*
 function main() {
   const data = {
     badges: createBadges(),
   };
-
+/*
   fs.writeFileSync(
-    path.resolve(__dirname, 'db.json'),
+    path.resolve(__dirname,'public','db.json'),
     JSON.stringify(data, null, 4)
   );
+  fs.writeFileSync(
+    path.resolve('./public/db.json'),
+    JSON.stringify(data, null, 4)
+  );
+}*/
+/*
+if (!fs.existsSync(path.resolve(__dirname, 'public','db.json'))) {
+  main();
+}*/
+function main() {
+  console.log('Seeding process started...');
+
+  const data = {
+    badges: createBadges(),
+  };
+
+  try {
+    const filePath = path.resolve('./public/db.json');
+    fs.writeFileSync(filePath, JSON.stringify(data, null, 4));
+    console.log('Data successfully written to db.json at:', filePath);
+  } catch (error) {
+    console.error('Error writing to db.json:', error);
+  }
+
+  console.log('Seeding process completed.');
 }
 
-main();
+  main();

@@ -1,5 +1,5 @@
 import React from 'react';
-import BadgeListItem from '../components/BadgeListItem';
+import BadgeListItem from './BadgeListItem';
 import {Link} from 'react-router-dom';
 import './styles/BadgesList.css';
 class BadgesList extends React.Component {

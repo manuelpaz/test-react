@@ -4,7 +4,7 @@ import React from "react";
 import PageLoading from '../components/PageLoading'
 import PageError from   '../components/PageError'
 
-import api from '../api'
+import api from '../api/api'
 import BadgeDetails from "./BadgeDetails";
 
 class BadgeDetailsContainer extends React.Component{
